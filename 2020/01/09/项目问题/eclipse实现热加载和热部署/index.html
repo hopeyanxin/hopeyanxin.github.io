@@ -46,15 +46,19 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://github.com/hopeyanxin/hopeyanxin.github.io.git/archives/index.html">
+  <meta name="description" content="eclipse实现热部署和热启动      （1） 热部署:就是容器状态在运行的情况下重新部署整个项目.在这种情况下一般整个内存会清空,重新加载.简单来说就是Tomcat或者其他的web服务器会帮我们重新加载项目.这种方式可能会造成sessin丢失等情况.   （2）热加载:就是容器状态在运行的情况下重新加载改变编译后的类.在这种情况下内存不会清空,sessin不会丢失,但容易造成内存溢出,或者找">
+<meta property="og:type" content="article">
+<meta property="og:title" content="eclipse实现热加载和热部署">
+<meta property="og:url" content="https://github.com/hopeyanxin/hopeyanxin.github.io.git/2020/01/09/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/eclipse%E5%AE%9E%E7%8E%B0%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%92%8C%E7%83%AD%E9%83%A8%E7%BD%B2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="eclipse实现热部署和热启动      （1） 热部署:就是容器状态在运行的情况下重新部署整个项目.在这种情况下一般整个内存会清空,重新加载.简单来说就是Tomcat或者其他的web服务器会帮我们重新加载项目.这种方式可能会造成sessin丢失等情况.   （2）热加载:就是容器状态在运行的情况下重新加载改变编译后的类.在这种情况下内存不会清空,sessin不会丢失,但容易造成内存溢出,或者找">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-09T09:19:16.095Z">
+<meta property="article:modified_time" content="2019-07-09T08:38:22.149Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://github.com/hopeyanxin/hopeyanxin.github.io.git/archives/">
+<link rel="canonical" href="https://github.com/hopeyanxin/hopeyanxin.github.io.git/2020/01/09/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/eclipse%E5%AE%9E%E7%8E%B0%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%92%8C%E7%83%AD%E9%83%A8%E7%BD%B2/">
 
 
 <script id="page-configurations">
@@ -62,11 +66,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>Archive | Hexo</title>
+  <title>eclipse实现热加载和热部署 | Hexo</title>
   
 
 
@@ -160,232 +164,99 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 10 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="https://github.com/hopeyanxin/hopeyanxin.github.io.git/2020/01/09/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/eclipse%E5%AE%9E%E7%8E%B0%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%92%8C%E7%83%AD%E9%83%A8%E7%BD%B2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/hopeyanxin.github.io/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          eclipse实现热加载和热部署
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-09 17:19:16" itemprop="dateCreated datePublished" datetime="2020-01-09T17:19:16+08:00">2020-01-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-09 16:38:22" itemprop="dateModified" datetime="2019-07-09T16:38:22+08:00">2019-07-09</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
+        <p>eclipse实现热部署和热启动<br>      （1） 热部署:就是容器状态在运行的情况下重新部署整个项目.在这种情况下一般整个内存会清空,重新加载.简单来说就是Tomcat或者其他的web服务器会帮我们重新加载项目.这种方式可能会造成sessin丢失等情况.</p>
+<p>  （2）热加载:就是容器状态在运行的情况下重新加载改变编译后的类.在这种情况下内存不会清空,sessin不会丢失,但容易造成内存溢出,或者找不到方法。因为内存无法转变成对像. 一般改变类的结构和模型就会有异常，在已经有的变量和方法中改变是不会出问题的</p>
+<p>​    在基于Java的实现热部署、热加载的过程中，类装入器扮演着重要的角色。类装入器不能重新装入一个已经装入的类，否则会报java.lang.LinkageError，但只要使用一个新的类装入器实例，就可以将类再次装入一个正在运行的应用程序。一般debug模式都支持热加载。</p>
+<p>   但我在这里遇到了eclipse使用debug启动却并没有热加载的状况，这样对于开发来说是非常耗时的，因为每更改一次class文件都需要重新编译。下面我就如何使用eclipse进行热加载，做一个简单介绍：</p>
+<p>  启动eclicpse 找到下面这个目录</p>
+<pre><code>打开server.xml,找到</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Context docBase&#x3D;&quot;dreamlive&quot; path&#x3D;&quot;&#x2F;ROOT&quot; reloadable&#x3D;&quot;false&quot; crossContext&#x3D;&quot;true&quot; source&#x3D;&quot;org.eclipse.jst.jee.server:dreamlive&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-09T17:19:16+08:00"
-              content="2020-01-09">
-          01-09
-        </time>
-      </div>
+<p>这行代码，在你部署新项目的时候，docBase和source会随着改变，现在还是 热部署   的状态，这样每次更改class文件都会自动的去编译，比较耗时，接下来我们更改一下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Context docBase&#x3D;&quot;dreamlive&quot; path&#x3D;&quot;&#x2F;ROOT&quot; reloadable&#x3D;&quot;false&quot; crossContext&#x3D;&quot;true&quot; source&#x3D;&quot;org.eclipse.jst.jee.server:dreamlive&quot;&#x2F;&gt;&lt;&#x2F;Host&gt;</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/hopeyanxin.github.io/2020/01/09/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/Java-mail-%E9%80%9A%E8%BF%87QQ%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E8%BF%9B%E8%A1%8C%E9%AA%8C%E8%AF%81/" itemprop="url">
-            <span itemprop="name">Java mail 通过QQ邮箱发送邮件进行验证</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-09T17:19:16+08:00"
-              content="2020-01-09">
-          01-09
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/hopeyanxin.github.io/2020/01/09/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/eclipse%E5%AE%9E%E7%8E%B0%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%92%8C%E7%83%AD%E9%83%A8%E7%BD%B2/" itemprop="url">
-            <span itemprop="name">eclipse实现热加载和热部署</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-09T17:19:16+08:00"
-              content="2020-01-09">
-          01-09
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/hopeyanxin.github.io/2020/01/09/%E6%97%A5%E5%B8%B8%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/%E6%97%A5%E5%B8%B8%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" itemprop="url">
-            <span itemprop="name">日常遇到问题解决方法</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-09T17:19:16+08:00"
-              content="2020-01-09">
-          01-09
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/hopeyanxin.github.io/2020/01/09/%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/JRebel-idea-%E5%AE%89%E8%A3%85/" itemprop="url">
-            <span itemprop="name">JRebel idea 安装</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-09T17:19:16+08:00"
-              content="2020-01-09">
-          01-09
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/hopeyanxin.github.io/2020/01/09/ssm/%E6%98%8E%E4%BF%A1%E9%9D%A2%E8%AF%95%E9%A2%98/" itemprop="url">
-            <span itemprop="name">ssm/明信面试题</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-09T17:19:16+08:00"
-              content="2020-01-09">
-          01-09
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/hopeyanxin.github.io/2020/01/09/ssm/SSM%E6%A1%86%E6%9E%B6/" itemprop="url">
-            <span itemprop="name">SSM框架知识点汇总</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-09T17:19:16+08:00"
-              content="2020-01-09">
-          01-09
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/hopeyanxin.github.io/2020/01/09/Hadoop/Hadoop/" itemprop="url">
-            <span itemprop="name">Hadoop</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-09T14:52:25+08:00"
-              content="2020-01-09">
-          01-09
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/hopeyanxin.github.io/2020/01/09/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-07-04T19:52:32+08:00"
-              content="2019-07-04">
-          07-04
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/hopeyanxin.github.io/2019/07/04/Hexo/%E5%AE%89%E8%A3%85Hexo%E8%BF%87%E7%A8%8B/" itemprop="url">
-            <span itemprop="name">安装Hexo过程</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-07-04T18:32:42+08:00"
-              content="2019-07-04">
-          07-04
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/hopeyanxin.github.io/2019/07/04/test/" itemprop="url">
-            <span itemprop="name">test</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
+<p>这里将reloadable改为false,添加crossContext=”true”，这样就能进行   热启动   了，注意：需要用debug启动</p>
+<p>不过我们需要在每次部署新项目的时候，重新去更改这个配置，我们可以观察每次部署新项目的时候，server.xml这个文件的动态变化。</p>
 
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/hopeyanxin.github.io/2020/01/09/%E6%97%A5%E5%B8%B8%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/%E6%97%A5%E5%B8%B8%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" rel="prev" title="日常遇到问题解决方法">
+      <i class="fa fa-chevron-left"></i> 日常遇到问题解决方法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/hopeyanxin.github.io/2020/01/09/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/Java-mail-%E9%80%9A%E8%BF%87QQ%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E8%BF%9B%E8%A1%8C%E9%AA%8C%E8%AF%81/" rel="next" title="Java mail 通过QQ邮箱发送邮件进行验证">
+      Java mail 通过QQ邮箱发送邮件进行验证 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
